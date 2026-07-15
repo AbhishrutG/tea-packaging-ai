@@ -9,6 +9,16 @@ system calculates an optimized packaging pipeline (package → carton → pallet
 → container) and compares it against a naive "current practice" baseline to
 quantify savings in material, space, and freight cost.
 
+## Screenshots
+
+| Dashboard | New Simulation |
+|---|---|
+| ![Dashboard](docs/screenshots/dashboard.png) | ![New Simulation](docs/screenshots/new-simulation.png) |
+
+| Results — Pipeline & Savings | Results — Current vs AI Comparison |
+|---|---|
+| ![Results 1](docs/screenshots/results-1.png) | ![Results 2](docs/screenshots/results-2.png) |
+
 ## Tech Stack
 
 - **Backend:** Python, FastAPI, SQLAlchemy, SQLite (local dev)
