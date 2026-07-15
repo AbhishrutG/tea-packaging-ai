@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+/*
+  DESIGN TOKENS -- "Cargo Manifest" system
+  This is a B2B logistics/supply-chain tool, not a marketing site, so the
+  palette leans into shipping-manifest / warehouse-ledger territory rather
+  than a generic soft SaaS look: deep ink background, warm copper accent
+  (the color of tea leaf / aged cardboard / brass fittings on cargo gear),
+  a cool teal for "AI/optimized" data, and monospace numerals throughout
+  data-heavy areas so figures read like a real manifest, not marketing copy.
+*/
+:root {
+  --ink: #0d1512;
+  --surface: #141f1a;
+  --surface-2: #1b2820;
+  --border: #263630;
+  --paper: #ece7dc;
+  --muted: #8b9790;
+  --copper: #c98a3e;
+  --copper-soft: #c98a3e1a;
+  --teal: #4fa98c;
+  --teal-soft: #4fa98c1a;
+  --alert: #c9663e;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-paper: var(--paper);
+  --color-muted: var(--muted);
+  --color-copper: var(--copper);
+  --color-teal: var(--teal);
+  --color-alert: var(--alert);
+  --font-display: "Avenir Next", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Segoe UI", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "SFMono-Regular", "Consolas", ui-monospace, "Menlo", monospace;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background:
+    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(201, 138, 62, 0.10), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 100% 0%, rgba(79, 169, 140, 0.08), transparent 55%),
+    var(--ink);
+  color: var(--paper);
+  font-family: var(--font-sans);
+}
+
+.card {
+  background: linear-gradient(180deg, var(--surface), var(--surface-2) 140%);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.03) inset, 0 8px 20px -12px rgba(0, 0, 0, 0.5);
+}
+
+.card-hover {
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.card-hover:hover {
+  border-color: var(--copper);
+  transform: translateY(-1px);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-variant-numeric: tabular-nums;
+}
+
+.badge-positive {
+  background: var(--teal-soft);
+  color: var(--teal);
+  border: 1px solid rgba(79, 169, 140, 0.35);
+}
+
+.badge-negative {
+  background: rgba(201, 102, 62, 0.12);
+  color: var(--alert);
+  border: 1px solid rgba(201, 102, 62, 0.35);
+}
+
+.badge-neutral {
+  background: var(--copper-soft);
+  color: var(--copper);
+  border: 1px solid rgba(201, 138, 62, 0.35);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-data {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+::selection {
+  background: var(--copper-soft);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.input {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--paper);
+}
+
+.input:focus {
+  border-color: var(--copper);
+}
