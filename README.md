@@ -11,7 +11,7 @@ quantify savings in material, space, and freight cost.
 
 ## Demo Video
 
-[Watch the demo video](https://drive.google.com/drive/folders/1TCdHvA07yAb5YimpAhWL4DmjahN4x8AI?usp=sharing) — architecture, AI/optimization logic, and a live walkthrough of the application.
+[Watch the demo video](https://drive.google.com/drive/folders/1fw5uHuVdJ3LcvOf33HaPOVM_ST6c_K0V?usp=sharing) — architecture, AI/optimization logic, and a live walkthrough of the application.
 
 ## Screenshots
 
