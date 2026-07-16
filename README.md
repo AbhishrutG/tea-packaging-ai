@@ -9,6 +9,10 @@ system calculates an optimized packaging pipeline (package → carton → pallet
 → container) and compares it against a naive "current practice" baseline to
 quantify savings in material, space, and freight cost.
 
+## Demo Video
+
+[Watch the demo video](https://drive.google.com/drive/folders/1TCdHvA07yAb5YimpAhWL4DmjahN4x8AI?usp=sharing) — architecture, AI/optimization logic, and a live walkthrough of the application.
+
 ## Screenshots
 
 | Dashboard | New Simulation |
